@@ -19,26 +19,20 @@ router.get('/', (req, res) => {
       where: {
         id: req.params.id
       },
-    //   include: [
-    //     {
-    //       model: Post,
-    //       attributes: ['id', 'title', 'post_url', 'created_at']
-    //     },
-    //     {
-    //       model: Comment,
-    //       attributes: ['id', 'comment_text', 'created_at'],
-    //       include: {
-    //         model: Post,
-    //         attributes: ['title']
-    //       }
-    //     },
-    //     {
-    //       model: Post,
-    //       attributes: ['title'],
-    //       through: Vote,
-    //       as: 'voted_posts'
-    //     }
-    //   ]
+      include: [
+        {
+          model: Post,
+          attributes: ['id', 'title', 'post_url', 'created_at']
+        },
+        {
+          model: Comment,
+          attributes: ['id', 'comment_text', 'created_at'],
+          include: {
+            model: Post,
+            attributes: ['title']
+          }
+        },
+      ]
     })
       .then(dbUserData => {
         if (!dbUserData) {
@@ -61,7 +55,9 @@ router.get('/', (req, res) => {
       password: req.body.password
     })
       .then(dbUserData => {
+        // Save function to a session
         req.session.save(() => {
+          // Give the function data that we want to save
           req.session.user_id = dbUserData.id;
           req.session.username = dbUserData.username;
           req.session.loggedIn = true;
