@@ -4,7 +4,7 @@ const sequelize = require('../config/connection');
 
 // Create user model
 
-class User extends model {}
+class User extends Model {}
 
 User.init(
     {
