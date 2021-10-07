@@ -1,0 +1,102 @@
+:root {
+    --main-color: #EDD3C4;
+    --secondary-color: #080708;
+    --tertiary-color: #3b60e4;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Share Tech', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-position: top;
+    background-size: cover;
+    background-image: url(../images/bg.png);
+    background-color: var(--main-color);
+}
+
+/* Nav Bar */ 
+.nav-container {
+    width: 100%;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    font-size: 25px;
+    padding: 10px 20px;
+    /* border-bottom: 4px solid var(--tertiary-color); */
+}
+
+.nav-container span {
+    color: rgb(63, 63, 63);
+    font-weight: 800;
+}
+
+.nav {
+    display: flex;
+    padding: 0 5px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav a {
+    text-decoration: none;
+    padding: 0 30px;
+    color: black;
+    cursor: pointer;
+}
+
+.nav a:hover {
+    color: var(--tertiary-color);
+    transition: .5s;
+}
+
+/* Login/register page */
+
+.outer-container {
+    display: flex;
+    justify-content: center;
+    padding: 10px 30px;
+    align-items: center;
+    border-top: 3px solid var(--tertiary-color);
+}
+
+.login-container, .signup-container {
+    width: 80%;
+}
+
+.login-container form, .signup-container form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font-size: 26px;
+    padding: 20px;
+}
+
+.login-container h3, .signup-container h3 {
+    text-align: center;
+    font-size: 40px;
+}
+
+.login-container button, .signup-container button {
+    margin-top: 15px;
+    padding: 5px 15px;
+}
+
+.signup-container, .login-container {
+    padding-top: 50px;
+}
+
+.login-container button:hover, .signup-container button:hover {
+    background-color: var(--tertiary-color);
+    color: var(--main-color);
+    transition: .5s;
+    cursor: pointer;
+}
