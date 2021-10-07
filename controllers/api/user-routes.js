@@ -1,9 +1,10 @@
 const router = require('express').Router();
 const { User, Post, Comment } = require('../../models');
+const sequelize = require('../../config/connection');
 
 router.get('/', (req, res) => {
     User.findAll({
-            attributes: { exclude: ['[password'] }
+            attributes: { exclude: ['password'] }
         })
         .then(dbUserData => res.json(dbUserData))
         .catch(err => {
@@ -61,8 +62,7 @@ router.post('/', (req, res) => {
     User.create({
         username: req.body.username,
         password: req.body.password
-    })
-
+    }) 
     .then(dbUserData => {
             req.session.save(() => {
                 req.session.user_id = dbUserData.id;

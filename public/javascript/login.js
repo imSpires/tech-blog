@@ -1,3 +1,4 @@
+// Login form JS
 async function loginFormHandler(event) {
     event.preventDefault();
   
@@ -24,8 +25,10 @@ async function loginFormHandler(event) {
   
 
 document.querySelector('#login-form').addEventListener('submit', loginFormHandler);
-  
-  async function signupFormHandler(event) {
+
+
+// Register form JS
+async function signupFormHandler(event) {
     event.preventDefault();
   
     const username = document.querySelector('#username-signup').value.trim();
@@ -42,13 +45,11 @@ document.querySelector('#login-form').addEventListener('submit', loginFormHandle
       });
   
       if (response.ok) {
-        document.location.replace('/');
+        document.location.replace('/dashboard');
       } else {
         alert(response.statusText);
-      }
     }
   }
+}
   
-  document.querySelector('.login-form').addEventListener('submit', loginFormHandler);
-  
-  document.querySelector('.signup-form').addEventListener('submit', signupFormHandler);
+document.querySelector('#signup-form').addEventListener('submit', signupFormHandler);
