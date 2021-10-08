@@ -13,6 +13,7 @@
   #
 
   ## Project Links
+  Deployment link: https://pacific-brushlands-53431.herokuapp.com/
   https://github.com/imspires/tech-blog<br>
 
   ## Media
