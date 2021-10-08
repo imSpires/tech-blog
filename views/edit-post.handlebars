@@ -6,8 +6,8 @@
         <input name="post-title" type="text" value="{{post.title}}" class="form-input" />
         <label class="form-label" for="content">Content</label>
         <textarea name="content" cols="30" rows="3" type="text" value="{{post.content}}" class="form-input">{{post.content}}</textarea>
-        <button type="submit" class="btn">Update Post</button>
-        <button type="button" class="delete-post-btn btn">Delete Post</button>
+        <button type="submit" class="edit-post-btn btn" id={{post.id}}>Update Post</button>
+        <button type="button" class="delete-post-btn btn" id={{post.id}}>Delete Post</button>
     </form>
 </div>
 
