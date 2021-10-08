@@ -13,8 +13,8 @@
   #
 
   ## Project Links
-  Deployment link: https://pacific-brushlands-53431.herokuapp.com/
-  https://github.com/imspires/tech-blog<br>
+  Deployment link: https://pacific-brushlands-53431.herokuapp.com/ <br>
+  https://github.com/imspires/tech-blog
 
   ## Media
   ![Sreenshot](public/images/screenshot1.png?raw=true)
