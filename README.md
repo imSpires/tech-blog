@@ -1,4 +1,4 @@
-# <h1 align="center">Reading-Corner</h1>
+# <h1 align="center">Tech Blog</h1>
 
 [![github-follow](https://img.shields.io/github/followers/imspires?label=Follow&logoColor=purple&style=social)](https://github.com/imspires)
  ![license](https://img.shields.io/badge/license-Apache%202.0-blue)
